@@ -1,0 +1,14 @@
+{
+  "name": "docs",
+  "displayName": "Doc Mine & Distill",
+  "version": "0.1.0",
+  "description": "Turn a project into evidence-tagged Markdown knowledge. doc-mine interviews you first (what you know, what you want, what you assume but never checked), then mines the source into categorized docs/ where every sentence cites file:line, an official URL, or an actual run — gaps are marked [UNVERIFIED] instead of guessed. doc-distill condenses it all into one self-contained file you can hand to anyone. Cross-platform, zero-dependency.",
+  "author": {
+    "name": "Harry",
+    "url": "https://github.com/harry18456"
+  },
+  "homepage": "https://github.com/harry18456/cc-docs",
+  "repository": "https://github.com/harry18456/cc-docs",
+  "license": "MIT",
+  "keywords": ["documentation", "knowledge", "evidence", "grounded", "interview", "subagent", "distill", "skill", "claude-code"]
+}
