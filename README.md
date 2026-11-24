@@ -21,14 +21,16 @@ None — **zero dependencies**, cross-platform. Everything runs inside Claude Co
 
 ```
 /plugin marketplace add harry18456/cc
-/plugin install docs@harry18456
+/plugin install doc-mine-distill@harry18456
 ```
 
 Restart Claude Code to take effect.
 
+> Renamed from `docs` in 0.3.0. If you installed `docs@harry18456`, run `/plugin install doc-mine-distill@harry18456` once. The commands are now `/doc-mine-distill:doc-mine` and `/doc-mine-distill:doc-distill`.
+
 ### Use locally right away (no push, no marketplace)
 
-Junction the repo into the skills directory and the next session auto-loads it as `docs@skills-dir`:
+Junction the repo into the skills directory and the next session auto-loads it as `doc-mine-distill@skills-dir`:
 
 ```powershell
 New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\docs" -Target "D:\side_project\cc-docs"
@@ -43,13 +45,13 @@ For a single session instead: `claude --plugin-dir D:\side_project\cc-docs`.
 Open Claude Code in the project you want documented, then type the command:
 
 ```
-/docs:doc-mine
-/docs:doc-distill
+/doc-mine-distill:doc-mine
+/doc-mine-distill:doc-distill
 ```
 
-Extra instructions go right after the command — `/docs:doc-mine 技術和應用分開寫`. To skip the interview, say "直接開始" in that same message. For `doc-distill`, say who it is for or where to write it — `/docs:doc-distill for a new teammate, docs/onboarding.md`. The slash menu shows these hints.
+Extra instructions go right after the command — `/doc-mine-distill:doc-mine 技術和應用分開寫`. To skip the interview, say "直接開始" in that same message. For `doc-distill`, say who it is for or where to write it — `/doc-mine-distill:doc-distill for a new teammate, docs/onboarding.md`. The slash menu shows these hints.
 
-> Installed through the junction below instead of the marketplace, the names are `/docs@skills-dir:doc-mine` and `/docs@skills-dir:doc-distill`.
+> Installed through the junction below instead of the marketplace, the names are `/doc-mine-distill@skills-dir:doc-mine` and `/doc-mine-distill@skills-dir:doc-distill`.
 
 ## How `doc-mine` works
 

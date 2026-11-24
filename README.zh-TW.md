@@ -21,14 +21,16 @@
 
 ```
 /plugin marketplace add harry18456/cc
-/plugin install docs@harry18456
+/plugin install doc-mine-distill@harry18456
 ```
 
 重開 Claude Code 生效。
 
+> 0.3.0 起由 `docs` 改名。已安裝 `docs@harry18456` 的人，請執行一次 `/plugin install doc-mine-distill@harry18456`。指令改為 `/doc-mine-distill:doc-mine` 和 `/doc-mine-distill:doc-distill`。
+
 ### 本機立即使用(免 push、免 marketplace)
 
-把 repo 以 junction 連到 skills 目錄,下個 session 就自動以 `docs@skills-dir` 載入:
+把 repo 以 junction 連到 skills 目錄,下個 session 就自動以 `doc-mine-distill@skills-dir` 載入:
 
 ```powershell
 New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\docs" -Target "D:\side_project\cc-docs"
@@ -43,13 +45,13 @@ New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\docs" -Target
 在要整理的專案目錄開 Claude Code,直接打指令:
 
 ```
-/docs:doc-mine
-/docs:doc-distill
+/doc-mine-distill:doc-mine
+/doc-mine-distill:doc-distill
 ```
 
-補充指示接在指令後面——`/docs:doc-mine 技術和應用分開寫`。想跳過訪談,在同一則訊息說「直接開始」。`doc-distill` 可以說寫給誰、寫到哪——`/docs:doc-distill 寫給新同事,放 docs/onboarding.md`。slash 選單會顯示這些提示。
+補充指示接在指令後面——`/doc-mine-distill:doc-mine 技術和應用分開寫`。想跳過訪談,在同一則訊息說「直接開始」。`doc-distill` 可以說寫給誰、寫到哪——`/doc-mine-distill:doc-distill 寫給新同事,放 docs/onboarding.md`。slash 選單會顯示這些提示。
 
-> 若是用下面的 junction 安裝而非 marketplace,指令名稱是 `/docs@skills-dir:doc-mine` 和 `/docs@skills-dir:doc-distill`。
+> 若是用下面的 junction 安裝而非 marketplace,指令名稱是 `/doc-mine-distill@skills-dir:doc-mine` 和 `/doc-mine-distill@skills-dir:doc-distill`。
 
 ## `doc-mine` 怎麼運作
 
